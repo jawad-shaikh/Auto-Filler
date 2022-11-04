@@ -7,6 +7,7 @@ chrome.runtime.onMessage.addListener((message) => {
 function fillForm() {
   const inputs = document.querySelectorAll("input");
   const selectBoxes = document.querySelectorAll("select");
+  const textareas = document.querySelectorAll("textarea");
 
   const formatYmd = (date) => {
     return date.toISOString().slice(0, 10);
@@ -52,5 +53,14 @@ function fillForm() {
     const randomItem = Math.floor(Math.random() * selectBox.children.length);
 
     collection[randomItem].setAttribute("selected", "selected");
+  });
+
+  textareas.forEach((textarea) => {
+    textarea.innerText = `Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
+    molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
+    numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium
+    optio, eaque rerum! Provident similique accusantium nemo autem. Veritatis
+    obcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam
+    nihil`;
   });
 }
