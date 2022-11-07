@@ -6,20 +6,20 @@
   "manifest_version": 3,
   "action": {
     "default_icon": {
-      "128": "assets/icon.png",
-      "24": "assets/icon.png",
-      "32": "assets/icon.png"
+      "128": "assets/icons/icon.png",
+      "24": "assets/icons/icon.png",
+      "32": "assets/icons/icon.png"
     },
     "default_title": "Auto Form Filler",
     "default_popup": "src/popup.html"
   },
   "icons": {
-    "128": "assets/icon.png"
+    "128": "assets/icons/icon.png"
   },
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
-      "js": ["src/contentScript.js"]
+      "js": ["assets/js/contentScript.js"]
     }
   ],
   "author": "Jawad Shaikh"
